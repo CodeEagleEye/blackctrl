@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 7%;  /* #121212 */
+  --foreground: 0 0% 100%; /* #FFFFFF */
+  --muted: 0 0% 16%; /* #2A2A2A */
+  --muted-foreground: 0 0% 67%; /* #AAAAAA */
+  --popover: 0 0% 12%; /* #1E1E1E */
+  --popover-foreground: 0 0% 100%; /* #FFFFFF */
+  --card: 0 0% 12%; /* #1E1E1E */
+  --card-foreground: 0 0% 100%; /* #FFFFFF */
+  --border: 0 0% 23%; /* #3A3A3A */
+  --input: 0 0% 16%; /* #2A2A2A */
+  --primary: 0 76% 50%; /* #D32F2F */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 0 0% 16%; /* #2A2A2A */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 0 0% 16%; /* #2A2A2A */
+  --accent-foreground: 0 0% 100%; /* #FFFFFF */
+  --destructive: 0 84% 60%; /* #FF5252 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 0 76% 50%; /* #D32F2F */
+  --radius: 0.5rem;
+  
+  /* SWOT analysis colors */
+  --swot-strength: 142 76% 45%; /* #20C997 */
+  --swot-weakness: 45 93% 47%; /* #FFC107 */
+  --swot-opportunity: 217 91% 60%; /* #3B82F6 */
+  --swot-threat: 0 84% 60%; /* #FF5252 */
+}
+
+.dark {
+  --background: 0 0% 7%;  /* #121212 */
+  --foreground: 0 0% 100%; /* #FFFFFF */
+  --muted: 0 0% 16%; /* #2A2A2A */
+  --muted-foreground: 0 0% 67%; /* #AAAAAA */
+  --popover: 0 0% 12%; /* #1E1E1E */
+  --popover-foreground: 0 0% 100%; /* #FFFFFF */
+  --card: 0 0% 12%; /* #1E1E1E */
+  --card-foreground: 0 0% 100%; /* #FFFFFF */
+  --border: 0 0% 23%; /* #3A3A3A */
+  --input: 0 0% 16%; /* #2A2A2A */
+  --primary: 0 76% 50%; /* #D32F2F */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 0 0% 16%; /* #2A2A2A */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 0 0% 16%; /* #2A2A2A */
+  --accent-foreground: 0 0% 100%; /* #FFFFFF */
+  --destructive: 0 84% 60%; /* #FF5252 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 0 76% 50%; /* #D32F2F */
+  --radius: 0.5rem;
+  
+  /* SWOT analysis colors */
+  --swot-strength: 142 76% 45%; /* #20C997 */
+  --swot-weakness: 45 93% 47%; /* #FFC107 */
+  --swot-opportunity: 217 91% 60%; /* #3B82F6 */
+  --swot-threat: 0 84% 60%; /* #FF5252 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html, body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  input, textarea {
+    @apply bg-muted border border-border text-foreground focus:border-primary focus:outline-none;
+  }
+}
+
+@layer components {
+  .accordion-button {
+    @apply text-muted-foreground text-sm flex items-center;
+  }
+  
+  .primary-button {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-colors;
+  }
+  
+  .secondary-button {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors;
+  }
+}
